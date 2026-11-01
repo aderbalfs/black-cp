@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operação Black CP | Grupo VIP</title>
+  <meta name="description" content="Entre no Grupo VIP da CP Preparação e receba o link da Black antes da divulgação aberta, com bônus exclusivos.">
+  <meta name="theme-color" content="#0A0A0B">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800;900&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- CRONÔMETRO -->
+  <div class="timer" role="timer" id="timer">
+    <span class="timer__label"><span class="dot"></span><span id="timer-label">A Black CP abre em</span></span>
+    <span class="timer__units" aria-live="off">
+      <span class="timer__unit"><span id="t-d">00</span><small>d</small></span>
+      <span class="timer__unit"><span id="t-h">00</span><small>h</small></span>
+      <span class="timer__unit"><span id="t-m">00</span><small>m</small></span>
+      <span class="timer__unit"><span id="t-s">00</span><small>s</small></span>
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__bg-word outline-text" aria-hidden="true">BLACK</div>
+
+    <div class="wrap hero__top">
+      <img class="hero__logo" src="assets/img/marca-clara.png" alt="Curso Preparação · Tradição em aprovação">
+    </div>
+
+    <div class="wrap hero__grid">
+      <main class="hero__main" id="inscricao">
+        <div class="tag-op"><span>Operação Black CP</span></div>
+        <span class="hero__date" data-bind="dataCurta">04/11</span>
+
+        <h1 class="hero__title">O menor preço do ano para quem vai <span class="accent">vestir a farda</span></h1>
+
+        <p class="hero__sub">Entre no <b>Grupo VIP da CP Preparação</b> e receba o link da Black antes da divulgação aberta, com bônus que só o grupo vai ter.</p>
+
+        <div class="ficha">
+          <div class="ficha__head">
+            <span>Ficha de alistamento</span>
+            <span class="accent">Grupo VIP · Nº <span id="numero-ficha">0000</span></span>
+          </div>
+
+          <form class="form" id="form-lead" novalidate>
+            <div class="field" data-field="nome">
+              <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/></svg>
+              <input class="field__input" id="nome" name="nome" type="text" autocomplete="name" aria-label="Nome" placeholder="Nome completo">
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <div class="field" data-field="whats">
+              <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>
+              <input class="field__input" id="whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" aria-label="WhatsApp" placeholder="WhatsApp com DDD">
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <div class="field" data-field="email">
+              <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+              <input class="field__input" id="email" name="email" type="email" autocomplete="email" aria-label="E-mail" placeholder="Seu melhor e-mail">
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <div class="field" data-field="concurso">
+              <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4Zm-1.5 14.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7Z"/></svg>
+              <select class="field__input" id="concurso" name="concurso" required aria-label="Qual concurso você quer?">
+                <option value="" disabled selected>Qual farda você quer vestir?</option>
+                <option value="PMPE">PMPE · Polícia Militar de Pernambuco</option>
+                <option value="PCPE">PCPE · Polícia Civil de Pernambuco</option>
+                <option value="PPPE">PPPE · Polícia Penal de Pernambuco</option>
+                <option value="GCM Recife">GCM Recife · Guarda Municipal</option>
+                <option value="PMPB">PMPB · Polícia Militar da Paraíba</option>
+                <option value="PRF">PRF · Polícia Rodoviária Federal</option>
+                <option value="Ainda decidindo">Ainda estou decidindo</option>
+              </select>
+              <svg class="field__caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 3 6 7.5 10.5 3l1 1L6 9.5.5 4z"/></svg>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <div class="field" data-field="aceite">
+              <label class="check">
+                <input type="checkbox" id="aceite" name="aceite">
+                <span>Aceito receber mensagens da CP Preparação por WhatsApp e e-mail.</span>
+              </label>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <button class="btn form__submit" type="submit" id="btn-enviar">
+              <span id="btn-enviar-texto">Quero entrar no Grupo VIP</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg>
+            </button>
+          </form>
+
+          <div class="done" id="form-done" hidden>
+            <p class="done__kicker">Ficha recebida</p>
+            <h2 class="done__title" id="done-title">Você está dentro</h2>
+            <ol class="done__steps">
+              <li>
+                <span class="done__num">01</span>
+                <div>
+                  <strong>Entre no Grupo VIP</strong>
+                  <p>É por lá que o link da Black chega primeiro.</p>
+                  <a class="btn-whats" id="link-grupo" href="#" target="_blank" rel="noopener">Abrir o grupo no WhatsApp</a>
+                </div>
+              </li>
+              <li>
+                <span class="done__num">02</span>
+                <div>
+                  <strong>Ative as notificações</strong>
+                  <p>A abertura é avisada no grupo com poucos minutos de antecedência.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <p class="hero__privacy">Seus dados ficam só com a CP Preparação.</p>
+      </main>
+
+      <aside class="coord" aria-label="Coordenação">
+        <img class="coord__photo" src="assets/img/fotos/hero-foto.webp" alt="Marcos Germano, coordenador da CP Preparação">
+        <div class="coord__fade"></div>
+        <div class="coord__info">
+          <span class="coord__role">Coordenação</span>
+          <div class="coord__row">
+            <span class="coord__name">Marcos Germano</span>
+            <a class="coord__ig" href="https://instagram.com/marquinho_germano" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="#E8261C"/></svg>
+              @marquinho_germano
+            </a>
+          </div>
+          <div class="coord__creds">
+            <div class="cred-row">
+              <span class="cred-row__label">Trajetória</span>
+              <span class="chip chip--solid">Ex-Agente PCPE</span>
+              <span class="chip chip--solid">Ex-SD PMPB</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-row__label">Aprovações</span>
+              <span class="chip chip--ghost">CFO PMCE</span>
+              <span class="chip chip--ghost">PCPB (2x)</span>
+              <span class="chip chip--ghost">IBGE</span>
+              <span class="chip chip--ghost">OAB</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- MAIOR BLACK DA HISTÓRIA -->
+  <section class="black">
+    <div class="hazard" aria-hidden="true"></div>
+    <div class="alert-bar">
+      <span><span class="dot dot--fast"></span>Alerta máximo</span>
+      <span>Estoque de vagas limitado</span>
+      <span>Só durante a operação</span>
+    </div>
+
+    <div class="wrap black__inner">
+      <div class="black__year outline-text" aria-hidden="true">2026</div>
+
+      <div class="black__head">
+        <span class="stamp">Ordem de missão · Confidencial</span>
+        <h2 class="black__title">A maior Black Friday <span class="accent">da história</span> do CP</h2>
+        <p class="black__text">Nunca liberamos condições assim. São planos <b>vitalícios</b> e <b>anuais</b> para todas as carreiras policiais, com o menor valor que a CP Preparação já praticou. Quando o cronômetro zerar, essa oferta <b>não volta</b>.</p>
+      </div>
+
+      <div class="plans">
+        <article class="plan plan--featured">
+          <span class="plan__badge">Mais escolhido</span>
+          <div class="plan__meta"><span>Plano 01</span><span>Acesso permanente</span></div>
+          <h3 class="plan__name">Vitalício</h3>
+          <p class="plan__desc">Pague uma vez e estude até a sua posse. Sem mensalidade, sem renovação, sem prazo para acabar.</p>
+          <ul class="plan__list">
+            <li>Todas as carreiras policiais no mesmo acesso</li>
+            <li>Atualizações a cada novo edital, sem custo extra</li>
+            <li>Se o concurso adiar, seu acesso continua</li>
+          </ul>
+          <div class="plan__price">
+            <span class="plan__price-label">Preço</span>
+            <span class="plan__price-value">Revelado só no Grupo VIP</span>
+          </div>
+        </article>
+
+        <article class="plan plan--default">
+          <div class="plan__meta"><span>Plano 02</span><span>12 meses</span></div>
+          <h3 class="plan__name">Anual</h3>
+          <p class="plan__desc">Um ano inteiro de preparação focada no seu edital, pelo menor valor que esse plano já teve.</p>
+          <ul class="plan__list">
+            <li>Curso completo da carreira escolhida</li>
+            <li>Aulas, materiais e simulados por 12 meses</li>
+            <li>Ideal para quem já tem prova à vista</li>
+          </ul>
+          <div class="plan__price">
+            <span class="plan__price-label">Preço</span>
+            <span class="plan__price-value">Revelado só no Grupo VIP</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="gift">
+        <span class="gift__tag">Brinde</span>
+        <span class="gift__text">Comprou o curso <b>PMPE presencial</b>, leva o curso <b class="accent">PMPB</b> de brinde.</span>
+      </div>
+
+      <div class="black__cta">
+        <p class="black__cta-line">Quem deixar para depois vai pagar o preço cheio. <span class="accent">E vai ver outro tomar a vaga.</span></p>
+        <button class="btn btn--lg" type="button" data-ir-para-form>
+          Garantir meu lugar no Grupo VIP
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg>
+        </button>
+        <span class="black__cta-note">O grupo recebe o link e os preços antes de todo mundo</span>
+      </div>
+    </div>
+    <div class="hazard" aria-hidden="true"></div>
+  </section>
+
+  <!-- CARREIRAS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="careers__head">
+        <div>
+          <p class="eyebrow">Área de atuação</p>
+          <h2 class="h-section">Seis fardas. <span class="accent">Um só preparo.</span></h2>
+        </div>
+        <p class="lead-muted">A CP prepara você para os concursos das polícias de Pernambuco, da Paraíba e da PRF. Na Black, o Grupo VIP escolhe primeiro o seu curso.</p>
+      </div>
+
+      <div class="careers__grid">
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/pmpe.png" alt="Brasão PMPE" data-crest="PMPE">
+          <div><b>PMPE</b><span>Polícia Militar · PE</span></div>
+        </div>
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/pcpe.png" alt="Brasão PCPE" data-crest="PCPE">
+          <div><b>PCPE</b><span>Polícia Civil · PE</span></div>
+        </div>
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/pppe.png" alt="Brasão PPPE" data-crest="PPPE">
+          <div><b>PPPE</b><span>Polícia Penal · PE</span></div>
+        </div>
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/gcm-recife.png" alt="Brasão GCM Recife" data-crest="GCM">
+          <div><b>GCM Recife</b><span>Guarda Municipal</span></div>
+        </div>
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/pmpb.png" alt="Brasão PMPB" data-crest="PMPB">
+          <div><b>PMPB</b><span>Polícia Militar · PB</span></div>
+        </div>
+        <div class="career">
+          <img class="career__crest" src="assets/img/brasoes/prf.png" alt="Brasão PRF" data-crest="PRF">
+          <div><b>PRF</b><span>Rodoviária Federal</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VANTAGENS DO GRUPO -->
+  <section class="section section--soft">
+    <div class="wrap perks">
+      <div>
+        <p class="eyebrow">Briefing da operação</p>
+        <h2 class="h-section">Quem está no grupo <span class="accent">sai na frente</span></h2>
+        <p class="lead-muted">Concurso é disputa por vaga. Na Black, também. O Grupo VIP existe para você não depender de ver o anúncio a tempo.</p>
+        <button class="btn btn--md" type="button" data-ir-para-form>Quero entrar no grupo</button>
+      </div>
+      <ol class="perks__list">
+        <li>
+          <span class="perks__num">01</span>
+          <div><h3>Abertura antecipada</h3><p>O link da Black chega no grupo antes de ser publicado para todo mundo.</p></div>
+        </li>
+        <li>
+          <span class="perks__num">02</span>
+          <div><h3>O menor preço do ano</h3><p>As condições da Black valem só durante a operação. Depois, os cursos voltam ao valor normal.</p></div>
+        </li>
+        <li>
+          <span class="perks__num">03</span>
+          <div><h3>Bônus exclusivos do grupo</h3><p>Materiais e aulas extras liberados apenas para quem entrou pelo Grupo VIP.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MURAL DE APROVADOS -->
+  <section class="section mural">
+    <div class="wrap mural__head">
+      <div>
+        <p class="eyebrow">Mural de aprovados</p>
+        <h2 class="h-section">Eles já vestem a farda. <span class="accent">O próximo nome pode ser o seu.</span></h2>
+        <p class="lead-muted">Alunos da CP Preparação aprovados nas carreiras policiais.</p>
+      </div>
+      <div class="rail-nav">
+        <button class="rail-btn" type="button" aria-label="Anterior" data-rail="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 5.3 4.1 12l6.7 6.7 1.4-1.4L7.9 13H20v-2H7.9l4.3-4.3z"/></svg></button>
+        <button class="rail-btn" type="button" aria-label="Próximo" data-rail="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="rail" id="rail">
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 001</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-1.webp" alt="Thalles Fernando" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Thalles Fernando</b><span>Soldado · PMPB</span></div><img src="assets/img/brasoes/pmpb.png" alt="" data-crest="PMPB"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 002</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-2.webp" alt="Daniel Junior" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Daniel Junior</b><span>Aprovado · PMPE e PPRN</span></div><img src="assets/img/brasoes/pmpe.png" alt="" data-crest="PMPE"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 003</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-3.webp" alt="Erick" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Erick</b><span>Soldado · PMPE</span></div><img src="assets/img/brasoes/pmpe.png" alt="" data-crest="PMPE"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 004</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-4.webp" alt="João Lucas" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>João Lucas</b><span>Soldado · PMPE</span></div><img src="assets/img/brasoes/pmpe.png" alt="" data-crest="PMPE"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 005</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-5.webp" alt="Messinho" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Messinho</b><span>Soldado · PMPE</span></div><img src="assets/img/brasoes/pmpe.png" alt="" data-crest="PMPE"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 006</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-6.webp" alt="Marcos Neto" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Marcos Neto</b><span>Soldado · PMPE</span></div><img src="assets/img/brasoes/pmpe.png" alt="" data-crest="PMPE"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 007</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-7.webp" alt="Angelica Rose" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Angelica Rose</b><span>Soldado · PMPB</span></div><img src="assets/img/brasoes/pmpb.png" alt="" data-crest="PMPB"></figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card__top"><span>CP Preparação</span><span>Nº 008</span></div>
+        <div class="card__photo"><img src="assets/img/fotos/aprovado-8.webp" alt="Arllon David" loading="lazy"><span class="card__stamp">APROVADO</span></div>
+        <figcaption><div><b>Arllon David</b><span>Soldado · PMPB</span></div><img src="assets/img/brasoes/pmpb.png" alt="" data-crest="PMPB"></figcaption>
+      </figure>
+
+      <figure class="card card--open">
+        <span class="mono">Nº 009 · vaga em aberto</span>
+        <b>Esse espaço é seu</b>
+        <span>A próxima foto do mural começa com a sua ficha.</span>
+        <button class="btn btn--sm" type="button" data-ir-para-form>Preencher ficha</button>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final">
+    <div class="wrap final__inner">
+      <div>
+        <p class="eyebrow">Operação Black CP · <span data-bind="dataCurta">04/11</span></p>
+        <h2>Quem está no grupo compra primeiro.</h2>
+      </div>
+      <button class="btn btn--dark" type="button" data-ir-para-form>Entrar no Grupo VIP</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="assets/img/marca-clara.png" alt="Curso Preparação">
+    <p>© 2026 CP Preparação. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
